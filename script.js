@@ -72,37 +72,59 @@ setTimeout(()=>t.classList.remove("show"),2000);
 }
 
 /* ================= CHAT ================= */
+document.addEventListener("DOMContentLoaded", function(){
+
 const chatBox = document.getElementById("chatBox");
 const chatContent = document.getElementById("chatContent");
+const chatNama = document.getElementById("chatNama");
+const chatInput = document.getElementById("chatInput");
+const sendChat = document.getElementById("sendChat");
+const closeChat = document.getElementById("closeChat");
 
+/* OPEN CHAT */
 document.querySelectorAll(".konsultasi").forEach(btn=>{
-btn.onclick = ()=>{
-let nama = btn.parentElement.querySelector("h3").innerText;
-document.getElementById("chatNama").innerText = nama;
+btn.addEventListener("click", function(){
+let nama = this.parentElement.querySelector("h3").innerText;
+
+chatNama.innerText = nama;
 chatBox.style.display = "flex";
+
 chatContent.innerHTML = `<div class="chat dokter">Halo saya ${nama}, ada keluhan apa?</div>`;
-};
+});
 });
 
-document.getElementById("sendChat").onclick = ()=>{
-let input = document.getElementById("chatInput");
+/* KIRIM CHAT */
+sendChat.addEventListener("click", function(){
 
-if(input.value==="") return;
+if(chatInput.value.trim() === "") return;
 
-chatContent.innerHTML += `<div class="chat user">${input.value}</div>`;
+chatContent.innerHTML += `<div class="chat user">${chatInput.value}</div>`;
 chatContent.scrollTop = chatContent.scrollHeight;
 
-input.value = "";
+let pesan = chatInput.value;
+chatInput.value = "";
 
+/* AUTO BALAS */
 setTimeout(()=>{
-chatContent.innerHTML += `<div class="chat dokter">Silakan istirahat & minum obat sesuai anjuran</div>`;
+chatContent.innerHTML += `<div class="chat dokter">Terima kasih, ${pesan}. Silakan istirahat & minum obat ya</div>`;
 chatContent.scrollTop = chatContent.scrollHeight;
 },1000);
-};
 
-document.getElementById("closeChat").onclick = ()=>{
+});
+
+/* ENTER = KIRIM */
+chatInput.addEventListener("keypress", function(e){
+if(e.key === "Enter"){
+sendChat.click();
+}
+});
+
+/* CLOSE */
+closeChat.addEventListener("click", function(){
 chatBox.style.display = "none";
-};
+});
+
+});
 
 /* ================= BOOKING ================= */
 const bookingBox = document.getElementById("bookingBox");
