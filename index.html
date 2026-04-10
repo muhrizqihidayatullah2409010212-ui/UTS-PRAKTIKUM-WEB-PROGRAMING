@@ -37,6 +37,10 @@
 
 
 
+<section class="statistik">
+
+<h2 class="title">Statistik Apotek</h2>
+
 <div class="stat-grid">
 
 <div class="stat-card">
@@ -551,26 +555,29 @@
 </section>
 
 <section class="section">
+
+<div class="form-box">
+
 <h2 class="title">Form Pendaftaran Vaksin</h2>
 
 <form id="formVaksin" novalidate>
 
-<div class="form-box">
+<div class="form-group">
 <input type="text" id="namaV" placeholder="Nama Lengkap" required>
 <small class="error"></small>
 </div>
 
-<div class="form-box">
+<div class="form-group">
 <input type="email" id="emailV" placeholder="Email" required>
 <small class="error"></small>
 </div>
 
-<div class="form-box">
+<div class="form-group">
 <input type="number" id="hpV" placeholder="No HP" required>
 <small class="error"></small>
 </div>
 
-<div class="form-box">
+<div class="form-group">
 <select id="jenisVaksin" required>
 <option value="">Pilih Vaksin</option>
 <option>Covid-19</option>
@@ -581,10 +588,10 @@
 <small class="error"></small>
 </div>
 
-<div class="form-box">
+<div class="form-group">
 <label class="checkbox">
 <input type="checkbox" id="setuju">
-Saya menyetujui tindakan medis dan bersedia mengikuti prosedur vaksin
+Saya menyetujui tindakan medis
 </label>
 <small class="error"></small>
 </div>
@@ -592,7 +599,11 @@ Saya menyetujui tindakan medis dan bersedia mengikuti prosedur vaksin
 <button type="submit" class="btn">Daftar Vaksin</button>
 
 </form>
+
+</div>
+
 </section>
+  
 <section id="lokasi" class="section">
 <h2 class="title">lokasi</h2>
 <div class="map-container">
@@ -607,46 +618,6 @@ Saya menyetujui tindakan medis dan bersedia mengikuti prosedur vaksin
 </footer>
 
 <div id="toast"></div>
-
-<!-- CHAT -->
-<div id="chatBox" class="chat-box">
-<div class="chat-header">
-<span id="chatNama"></span>
-<button id="closeChat">✖</button>
-</div>
-<div id="chatContent" class="chat-content"></div>
-<div class="chat-input">
-<input type="text" id="chatInput">
-<button id="sendChat">Kirim</button>
-</div>
-</div>
-
-<!-- BOOKING -->
-<div id="bookingBox" class="chat-box">
-<div class="chat-header">
-<span id="bookingNama"></span>
-<button id="closeBooking">✖</button>
-</div>
-<div class="chat-content">
-<input type="date" id="tanggal">
-<input type="time" id="jam">
-<button id="submitBooking">Konfirmasi</button>
-</div>
-</div>
-
-<!-- CHECKOUT -->
-<div id="checkoutBox" class="chat-box">
-<div class="chat-header">
-<span>Checkout</span>
-<button id="closeCheckout">✖</button>
-</div>
-<div class="chat-content">
-<ul id="checkoutList"></ul>
-<p id="totalHarga"></p>
-<input type="text" id="alamat" placeholder="Alamat lengkap">
-<button id="bayarBtn">Bayar</button>
-</div>
-</div>
 
 <script src="script.js"></script>
 </body>
