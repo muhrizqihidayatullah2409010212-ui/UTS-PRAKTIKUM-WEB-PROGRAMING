@@ -3,111 +3,650 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apotek Online</title>
+<title>ApotekKu Ultimate</title>
 <link rel="stylesheet" href="style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
-<nav class="navbar">
+<header class="navbar">
 <div class="logo">ApotekKu</div>
 
+<nav>
 <ul class="nav-links">
 <li><a href="#home">Home</a></li>
 <li><a href="#produk">Produk</a></li>
-<li><a href="#form">Pesan</a></li>
+<li><a href="#dokter">Dokter</a></li>
+<li><a href="#vaksin">Vaksin</a></li>
+<li><a href="#lokasi">Lokasi</a></li>
 </ul>
-
-<button id="darkToggle">🌙</button>
 </nav>
 
-<header id="home" class="hero">
-<h1>Apotek Online Modern</h1>
-<p>Solusi kesehatan cepat & terpercaya</p>
+<div class="nav-right">
+<input type="text" id="search" placeholder="Cari obat...">
+<div class="cart" id="openCheckout">🛒 <span id="cartCount">0</span></div>
+<button id="darkToggle">🌙</button>
+</div>
 </header>
+
+<section id="home" class="hero">
+<h1>Apotek Online Modern</h1>
+<p>Solusi kesehatan lengkap</p>
+</section>
+
+
+
+<div class="stat-grid">
+
+<div class="stat-card">
+<i class='bx bx-user'></i>
+<h2 class="counter" data-target="15000">0</h2>
+<p>Pelanggan</p>
+</div>
+
+<div class="stat-card">
+<i class='bx bx-capsule'></i>
+<h2 class="counter" data-target="300">0</h2>
+<p>Produk Obat</p>
+</div>
+
+<div class="stat-card">
+<i class='bx bx-plus-medical'></i>
+<h2 class="counter" data-target="20">0</h2>
+<p>Dokter</p>
+</div>
+
+<div class="stat-card">
+<i class='bx bx-injection'></i>
+<h2 class="counter" data-target="5000">0</h2>
+<p>Vaksinasi</p>
+</div>
+
+</div>
+
+</section>
 
 <main>
 
 <section id="produk" class="section">
-<h2 class="title">Produk Unggulan</h2>
-
+<h2 class="title">Produk</h2>
 <div class="card-container">
+
 <div class="card">
 <h3>Paracetamol</h3>
 <p>Penurun demam</p>
+<span>Rp 10.000 ⭐ 4.8</span>
+<button class="btn add-cart">Tambah</button>
 </div>
 
 <div class="card">
-<h3>Vitamin C</h3>
-<p>Menjaga imun</p>
+<h3>Ibuprofen</h3>
+<p>Anti nyeri</p>
+<span>Rp 12.000 ⭐ 4.7</span>
+<button class="btn add-cart">Tambah</button>
 </div>
 
 <div class="card">
 <h3>Amoxicillin</h3>
 <p>Antibiotik</p>
+<span>Rp 20.000 ⭐ 4.6</span>
+<button class="btn add-cart">Tambah</button>
 </div>
-
 
 <div class="card">
-<h3>condom sutra</h3>
-<p>Alat kontrasepsi</p>
+<h3>Vitamin C</h3>
+<p>Menjaga imun</p>
+<span>Rp 15.000 ⭐ 4.9</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>OBH Combi</h3>
+<p>Obat batuk</p>
+<span>Rp 18.000 ⭐ 4.7</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Bodrex</h3>
+<p>Sakit kepala</p>
+<span>Rp 8.000 ⭐ 4.5</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Antimo</h3>
+<p>Mabuk perjalanan</p>
+<span>Rp 7.000 ⭐ 4.6</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Promag</h3>
+<p>Maag</p>
+<span>Rp 9.000 ⭐ 4.7</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Betadine</h3>
+<p>Antiseptik</p>
+<span>Rp 14.000 ⭐ 4.8</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Panadol</h3>
+<p>Demam & flu</p>
+<span>Rp 13.000 ⭐ 4.8</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Sanmol</h3>
+<p>Demam anak</p>
+<span>Rp 11.000 ⭐ 4.7</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Enervon-C</h3>
+<p>Vitamin</p>
+<span>Rp 17.000 ⭐ 4.9</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Diapet</h3>
+<p>Diare</p>
+<span>Rp 10.000 ⭐ 4.6</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Decolgen</h3>
+<p>Flu</p>
+<span>Rp 12.000 ⭐ 4.7</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Mixagrip</h3>
+<p>Flu ringan</p>
+<span>Rp 9.000 ⭐ 4.6</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Neozep</h3>
+<p>Flu & hidung</p>
+<span>Rp 11.000 ⭐ 4.6</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Redoxon</h3>
+<p>Vitamin C tinggi</p>
+<span>Rp 25.000 ⭐ 4.9</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Nature-E</h3>
+<p>Vitamin kulit</p>
+<span>Rp 22.000 ⭐ 4.8</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Konidin</h3>
+<p>Batuk kering</p>
+<span>Rp 13.000 ⭐ 4.6</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Laserin</h3>
+<p>Batuk herbal</p>
+<span>Rp 16.000 ⭐ 4.7</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Albothyl</h3>
+<p>Sariawan</p>
+<span>Rp 20.000 ⭐ 4.7</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Insto</h3>
+<p>Tetes mata</p>
+<span>Rp 9.000 ⭐ 4.8</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Salonpas</h3>
+<p>Nyeri otot</p>
+<span>Rp 10.000 ⭐ 4.7</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Hansaplast</h3>
+<p>Plester luka</p>
+<span>Rp 8.000 ⭐ 4.6</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Termometer</h3>
+<p>Alat ukur suhu</p>
+<span>Rp 30.000 ⭐ 4.8</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Masker Medis</h3>
+<p>Pelindung</p>
+<span>Rp 5.000 ⭐ 4.5</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Hand Sanitizer</h3>
+<p>Pembersih tangan</p>
+<span>Rp 12.000 ⭐ 4.8</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Alcohol 70%</h3>
+<p>Disinfektan</p>
+<span>Rp 15.000 ⭐ 4.7</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Betahistine</h3>
+<p>Pusing</p>
+<span>Rp 18.000 ⭐ 4.6</span>
+<button class="btn add-cart">Tambah</button>
+</div>
+
+<div class="card">
+<h3>Caviplex</h3>
+<p>Multivitamin</p>
+<span>Rp 14.000 ⭐ 4.7</span>
+<button class="btn add-cart">Tambah</button>
+</div>
 
 </div>
+</section>
+
+<section id="dokter" class="section">
+<h2 class="title">Dokter</h2>
+
+<div class="card-container">
+
+<div class="card">
+<i class='bx bx-user'></i>
+<h3>Dr. Andi</h3>
+<p>Umum • 5 thn</p>
+<span>⭐ 4.8</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
 </div>
 
+<div class="card">
+<i class='bx bx-plus-medical'></i>
+<h3>Dr. Siti</h3>
+<p>Anak • 6 thn</p>
+<span>⭐ 4.9</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-user'></i>
+<h3>Dr. Budi</h3>
+<p>Umum • 4 thn</p>
+<span>⭐ 4.7</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-plus-medical'></i>
+<h3>Dr. Lina</h3>
+<p>Kulit • 7 thn</p>
+<span>⭐ 4.8</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-user'></i>
+<h3>Dr. Rudi</h3>
+<p>Gigi • 5 thn</p>
+<span>⭐ 4.6</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-plus-medical'></i>
+<h3>Dr. Maya</h3>
+<p>Kandungan • 8 thn</p>
+<span>⭐ 4.9</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-user'></i>
+<h3>Dr. Fajar</h3>
+<p>Jantung • 9 thn</p>
+<span>⭐ 4.8</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-plus-medical'></i>
+<h3>Dr. Rina</h3>
+<p>Mata • 6 thn</p>
+<span>⭐ 4.7</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-user'></i>
+<h3>Dr. Agus</h3>
+<p>Umum • 3 thn</p>
+<span>⭐ 4.5</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-plus-medical'></i>
+<h3>Dr. Nia</h3>
+<p>Saraf • 7 thn</p>
+<span>⭐ 4.8</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-user'></i>
+<h3>Dr. Dedi</h3>
+<p>Paru • 6 thn</p>
+<span>⭐ 4.7</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-plus-medical'></i>
+<h3>Dr. Putri</h3>
+<p>Psikolog • 5 thn</p>
+<span>⭐ 4.9</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-user'></i>
+<h3>Dr. Hendra</h3>
+<p>Ortopedi • 8 thn</p>
+<span>⭐ 4.7</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-plus-medical'></i>
+<h3>Dr. Wulan</h3>
+<p>THT • 6 thn</p>
+<span>⭐ 4.8</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-user'></i>
+<h3>Dr. Yoga</h3>
+<p>Umum • 4 thn</p>
+<span>⭐ 4.6</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-plus-medical'></i>
+<h3>Dr. Sari</h3>
+<p>Gizi • 5 thn</p>
+<span>⭐ 4.8</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-user'></i>
+<h3>Dr. Ilham</h3>
+<p>Urologi • 7 thn</p>
+<span>⭐ 4.7</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-plus-medical'></i>
+<h3>Dr. Nabila</h3>
+<p>Endokrin • 6 thn</p>
+<span>⭐ 4.9</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-user'></i>
+<h3>Dr. Reza</h3>
+<p>Umum • 3 thn</p>
+<span>⭐ 4.5</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+<div class="card">
+<i class='bx bx-plus-medical'></i>
+<h3>Dr. Aulia</h3>
+<p>Kulit • 5 thn</p>
+<span>⭐ 4.8</span>
+<button class="btn konsultasi">Chat</button>
+<button class="btn booking">Booking</button>
+</div>
+
+</div>
+</section>
+
+<section id="vaksin" class="section">
+<h2 class="title">Vaksin</h2>
+
+<div class="card-container">
+<div class="card">
+<i class='bx bx-injection'></i>
+<h3>Vaksin Covid-19</h3>
+<p>Booster terbaru</p>
+<button class="btn vaksin-btn">Daftar</button>
+</div>
+
+<div class="card">
+<i class='bx bx-injection'></i>
+<h3>Vaksin Influenza</h3>
+<p>Cegah flu musiman</p>
+<button class="btn vaksin-btn">Daftar</button>
+</div>
+
+<div class="card">
+<i class='bx bx-injection'></i>
+<h3>Vaksin Hepatitis B</h3>
+<p>Lindungi hati</p>
+<button class="btn vaksin-btn">Daftar</button>
+</div>
+
+<div class="card">
+<i class='bx bx-injection'></i>
+<h3>Vaksin Tetanus</h3>
+<p>Cegah infeksi luka</p>
+<button class="btn vaksin-btn">Daftar</button>
+</div>
+
+<div class="card">
+<i class='bx bx-injection'></i>
+<h3>Vaksin HPV</h3>
+<p>Cegah kanker serviks</p>
+<button class="btn vaksin-btn">Daftar</button>
+</div>
+
+<div class="card">
+<i class='bx bx-injection'></i>
+<h3>Vaksin Rabies</h3>
+<p>Gigitan hewan</p>
+<button class="btn vaksin-btn">Daftar</button>
+</div>
+
+<div class="card">
+<i class='bx bx-injection'></i>
+<h3>Vaksin DPT</h3>
+<p>Difteri, Pertusis, Tetanus</p>
+<button class="btn vaksin-btn">Daftar</button>
+</div>
+
+<div class="card">
+<i class='bx bx-injection'></i>
+<h3>Vaksin Polio</h3>
+<p>Untuk anak-anak</p>
+<button class="btn vaksin-btn">Daftar</button>
+</div>
+
+<div class="card">
+<i class='bx bx-injection'></i>
+<h3>Vaksin Campak</h3>
+<p>Cegah campak</p>
+<button class="btn vaksin-btn">Daftar</button>
+</div>
+
+<div class="card">
+<i class='bx bx-injection'></i>
+<h3>Vaksin Pneumonia</h3>
+<p>Infeksi paru</p>
+<button class="btn vaksin-btn">Daftar</button>
+</div>
+</div>
 </section>
 
 <section class="section">
-<h2 class="title">pencarian obat</h2>
+<h2 class="title">Form Pendaftaran Vaksin</h2>
 
-<div class="dynamic-box">
-<input type="text" id="inputProduk" placeholder="Tambah produk">
-<button onclick="tambahProduk()">Tambah</button>
+<form id="formVaksin" novalidate>
+
+<div class="form-box">
+<input type="text" id="namaV" placeholder="Nama Lengkap" required>
+<small class="error"></small>
 </div>
 
-
-<section id="form" class="section">
-<h2 class="title">Pemesanan Obat</h2>
-
-<form id="formObat">
-
-<input type="text" id="nama" placeholder="Nama" required>
+<div class="form-box">
+<input type="email" id="emailV" placeholder="Email" required>
 <small class="error"></small>
+</div>
 
-<input type="email" id="email" placeholder="Email" required>
+<div class="form-box">
+<input type="number" id="hpV" placeholder="No HP" required>
 <small class="error"></small>
+</div>
 
-<input type="number" id="hp" placeholder="No HP" required>
-<small class="error"></small>
-
-<select id="obat">
-<option value="">Pilih Obat</option>
-<option>Tablet</option>
-<option>Syrup</option>
+<div class="form-box">
+<select id="jenisVaksin" required>
+<option value="">Pilih Vaksin</option>
+<option>Covid-19</option>
+<option>Influenza</option>
+<option>Hepatitis B</option>
+<option>Tetanus</option>
 </select>
 <small class="error"></small>
-
-<div class="radio">
-<label><input type="radio" name="bayar" value="COD"> COD</label>
-<label><input type="radio" name="bayar" value="Transfer"> Transfer</label>
 </div>
-<small class="error"></small>
 
-<button type="submit">Pesan Sekarang</button>
+<div class="form-box">
+<label class="checkbox">
+<input type="checkbox" id="setuju">
+Saya menyetujui tindakan medis dan bersedia mengikuti prosedur vaksin
+</label>
+<small class="error"></small>
+</div>
+
+<button type="submit" class="btn">Daftar Vaksin</button>
 
 </form>
 </section>
-
-
-
-<ul id="listProduk"></ul>
+<section id="lokasi" class="section">
+<h2 class="title">lokasi</h2>
+<div class="map-container">
+<iframe src="https://maps.google.com/maps?q=medan&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
 </section>
 
 </main>
 
 <footer class="footer">
-© 2026 Apotek Online - Rizqi
+© 2026 ApotekKu - Rizqi
 </footer>
+
+<div id="toast"></div>
+
+<!-- CHAT -->
+<div id="chatBox" class="chat-box">
+<div class="chat-header">
+<span id="chatNama"></span>
+<button id="closeChat">✖</button>
+</div>
+<div id="chatContent" class="chat-content"></div>
+<div class="chat-input">
+<input type="text" id="chatInput">
+<button id="sendChat">Kirim</button>
+</div>
+</div>
+
+<!-- BOOKING -->
+<div id="bookingBox" class="chat-box">
+<div class="chat-header">
+<span id="bookingNama"></span>
+<button id="closeBooking">✖</button>
+</div>
+<div class="chat-content">
+<input type="date" id="tanggal">
+<input type="time" id="jam">
+<button id="submitBooking">Konfirmasi</button>
+</div>
+</div>
+
+<!-- CHECKOUT -->
+<div id="checkoutBox" class="chat-box">
+<div class="chat-header">
+<span>Checkout</span>
+<button id="closeCheckout">✖</button>
+</div>
+<div class="chat-content">
+<ul id="checkoutList"></ul>
+<p id="totalHarga"></p>
+<input type="text" id="alamat" placeholder="Alamat lengkap">
+<button id="bayarBtn">Bayar</button>
+</div>
+</div>
 
 <script src="script.js"></script>
 </body>
