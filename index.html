@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apotek Online</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">ApotekKu</div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#produk">Produk</a></li>
+<li><a href="#form">Pesan</a></li>
+</ul>
+
+<button id="darkToggle">🌙</button>
+</nav>
+
+<header id="home" class="hero">
+<h1>Apotek Online Modern</h1>
+<p>Solusi kesehatan cepat & terpercaya</p>
+</header>
+
+<main>
+
+<section id="produk" class="section">
+<h2 class="title">Produk Unggulan</h2>
+
+<div class="card-container">
+<div class="card">
+<h3>Paracetamol</h3>
+<p>Penurun demam</p>
+</div>
+
+<div class="card">
+<h3>Vitamin C</h3>
+<p>Menjaga imun</p>
+</div>
+
+<div class="card">
+<h3>Amoxicillin</h3>
+<p>Antibiotik</p>
+</div>
+
+
+<div class="card">
+<h3>condom sutra</h3>
+<p>Alat kontrasepsi</p>
+
+</div>
+</div>
+
+</section>
+
+<section class="section">
+<h2 class="title">pencarian obat</h2>
+
+<div class="dynamic-box">
+<input type="text" id="inputProduk" placeholder="Tambah produk">
+<button onclick="tambahProduk()">Tambah</button>
+</div>
+
+
+<section id="form" class="section">
+<h2 class="title">Pemesanan Obat</h2>
+
+<form id="formObat">
+
+<input type="text" id="nama" placeholder="Nama" required>
+<small class="error"></small>
+
+<input type="email" id="email" placeholder="Email" required>
+<small class="error"></small>
+
+<input type="number" id="hp" placeholder="No HP" required>
+<small class="error"></small>
+
+<select id="obat">
+<option value="">Pilih Obat</option>
+<option>Tablet</option>
+<option>Syrup</option>
+</select>
+<small class="error"></small>
+
+<div class="radio">
+<label><input type="radio" name="bayar" value="COD"> COD</label>
+<label><input type="radio" name="bayar" value="Transfer"> Transfer</label>
+</div>
+<small class="error"></small>
+
+<button type="submit">Pesan Sekarang</button>
+
+</form>
+</section>
+
+
+
+<ul id="listProduk"></ul>
+</section>
+
+</main>
+
+<footer class="footer">
+© 2026 Apotek Online - Rizqi
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
