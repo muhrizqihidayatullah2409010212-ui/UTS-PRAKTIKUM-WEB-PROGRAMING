@@ -11,6 +11,83 @@ color:white;
 padding-top:80px;
 }
 
+/* ================= MOBILE (HP) ================= */
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:10px;
+padding:15px;
+}
+
+.nav-links{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+.nav-right{
+flex-direction:column;
+width:100%;
+}
+
+#search{
+width:100%;
+}
+
+.hero{
+padding:100px 15px 60px;
+}
+
+.section{
+padding:60px 15px;
+}
+
+/* CARD */
+.card-container{
+grid-template-columns:1fr;
+}
+
+/* CHAT */
+.chat-box{
+width:95%;
+right:2.5%;
+height:350px;
+}
+
+/* FORM */
+.form-box{
+margin:20px;
+}
+
+/* MAP */
+.map-container iframe{
+height:250px;
+}
+
+}
+
+/* ================= TABLET ================= */
+@media(min-width:769px) and (max-width:1024px){
+
+.card-container{
+grid-template-columns:repeat(2,1fr);
+}
+
+.chat-box{
+width:350px;
+}
+
+}
+
+/* ================= DESKTOP ================= */
+@media(min-width:1025px){
+
+.card-container{
+grid-template-columns:repeat(4,1fr);
+}
+
+}
 /* NAVBAR */
 .navbar{
 position:fixed;
